@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-zinc-800 text-white p-10">
+    <a class="text-3xl text-blue-500 flex text-end mb-3" href="/logout"> <span>Logout</span></a>
+
+    <div class="flex items-center gap-3 px-4 py-2 max-w-[500px] bg-zinc-500">
+      <div class="w-[120px] rounded-lg overflow-hidden">
+        <img
+          src="<%= user.image %>"
+          alt="user image"
+          class="w-full h-full object-cover"
+        />
+      </div>
+     <div class="flex flex-col">
+        <h1 class="font-medium"><%= user.name %></h1>
+        <h2><%= user.email %></h2>
+     </div>
+    </div>
+  </body>
+</html>
