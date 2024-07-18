@@ -30,7 +30,7 @@ app.get("/", async (req, res) => {
 app.post("/signup", upload.single("image"), async (req, res) => {
   try {
     const { name, email, password } = req.body;
-    const image = req.file.path;
+    const image = req?.file?.path;
     const imgupld = await cloudinary.uploader.upload(image, {
       public_id: `${name}-img`,
       transformation: [
